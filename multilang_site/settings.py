@@ -79,32 +79,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'multilang_site.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-# MYSQL
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'bd_article',
-#         'USER': 'root',
-#         'PASSWORD': '',
-#         'HOST': 'localhost',
-#         'PORT': '3306',
-#         'OPTIONS': {
-#             'unix_socket': '/opt/lampp/var/mysql/mysql.sock',
-#         },
-#     }
-# }
-
 #Render ProstgreSQL database 
 DATABASES = {
     'default': dj_database_url.parse(env('DATABASE_URL'))
@@ -147,16 +121,20 @@ LANGUAGES = [
     ('fr', _('Français')),
 ]
 
-LOCALE_PATHS = [
-    BASE_DIR / 'locale',
-]
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
 
+APPEND_SLASH = True
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+API_KEY = env('API_KEY')

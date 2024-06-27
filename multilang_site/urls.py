@@ -25,7 +25,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     path('', include('main.urls')),
-    path('main/', include('main.urls')),
+    # path('main/', include('main.urls')),
     path("<str:language>/", set_language, name="set-language"),
     prefix_default_language=False,
 )
