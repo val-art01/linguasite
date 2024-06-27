@@ -46,6 +46,7 @@ rassurez vous que votre quota actuel pour l'utilisation de l'API OpenAI n'est pa
 ```
 5. Appliquez les migrations de la base de données:
 ```shell
+python manage.py makemigrations
 python manage.py migrate
 ```
 6. Créez un superutilisateur pour accéder à l'admin Django :

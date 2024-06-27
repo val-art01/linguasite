@@ -28,9 +28,9 @@ environ.Env.read_env()
 SECRET_KEY = 'django-insecure-rlyqy_78z&l&kk-)r7b_+@+625(f3*sry1&sl^zba&l9ise3ju'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False # True default
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -87,24 +87,24 @@ WSGI_APPLICATION = 'multilang_site.wsgi.application'
 }'''
 
 # MYSQL
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bd_article',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3306',
-        'OPTIONS': {
-            'unix_socket': '/opt/lampp/var/mysql/mysql.sock',
-        },
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'bd_article',
+#         'USER': 'root',
+#         'PASSWORD': '',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#         'OPTIONS': {
+#             'unix_socket': '/opt/lampp/var/mysql/mysql.sock',
+#         },
+#     }
+# }
 
 #Render ProstgreSQL database 
-# DATABASES = {
-#     'default': dj_database_url.parse(env('DATABASE_URL'))
-# }
+DATABASES = {
+    'default': dj_database_url.parse(env('DATABASE_URL'))
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
