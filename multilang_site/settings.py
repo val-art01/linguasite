@@ -13,6 +13,7 @@ import environ
 import os
 from pathlib import Path
 import dj_database_url
+from django.utils.translation import gettext_lazy as _
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,9 +29,11 @@ environ.Env.read_env()
 SECRET_KEY = 'django-insecure-rlyqy_78z&l&kk-)r7b_+@+625(f3*sry1&sl^zba&l9ise3ju'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False # True default
+DEBUG = False
+# True default
 
 ALLOWED_HOSTS = ['*']
+# ['*'] default
 
 
 # Application definition
@@ -48,6 +51,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -79,12 +83,12 @@ WSGI_APPLICATION = 'multilang_site.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-'''DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}'''
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 # MYSQL
 # DATABASES = {
@@ -132,10 +136,20 @@ LANGUAGE_CODE = 'fr-fr'
 
 TIME_ZONE = 'UTC'
 
+USE_L10N = True
+
 USE_I18N = True
 
 USE_TZ = True
 
+LANGUAGES = [
+    ('en', _('English')),
+    ('fr', _('Français')),
+]
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/

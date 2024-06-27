@@ -16,8 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.i18n import i18n_patterns
 
+from .views import set_language
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('main.urls')),
 ]
+
+urlpatterns += i18n_patterns(
+    path('', include('main.urls')),
+    path('main/', include('main.urls')),
+    path("<str:language>/", set_language, name="set-language"),
+    prefix_default_language=False,
+)
