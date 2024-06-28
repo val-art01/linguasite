@@ -50,10 +50,8 @@ def chatbot(request):
         Exception: Pour toute autre erreur liée à l'API OpenAI.
     """
     client = OpenAI(api_key=settings.API_KEY)
-    print(settings.API_KEY)
     if request.method == 'POST':
         question = request.POST.get('question')
-        print(question)
         try:
             completion = client.chat.completions.create(
                 model="gpt-4-turbo-preview",
@@ -65,7 +63,6 @@ def chatbot(request):
                 n=1,
                 stop=None
             )
-            print("aswer: ", completion)
             answer = completion.choices[0].message.content
             return JsonResponse({'answer': answer})
         except RateLimitError:

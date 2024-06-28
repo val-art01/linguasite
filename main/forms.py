@@ -19,6 +19,5 @@ class ArticleCreate(forms.ModelForm):
                 'class': 'form-control rounded-3',
                 'id': 'floatingPassword',
                 'placeholder': '{% trans "Contenu" %}',
-                'row':5,
             }),
         }

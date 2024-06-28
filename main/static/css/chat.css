@@ -46,6 +46,13 @@
   background-color: #e5e5e5;
 }
 
+#loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
 .flex-equal > * {
   flex: 1;
 }

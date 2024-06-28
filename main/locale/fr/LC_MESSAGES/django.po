@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-28 21:21+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+#: main/templates/main/base.html:24 main/templates/main/index.html:4
+msgid "Acceuil"
+msgstr ""
+
+#: main/templates/main/base.html:25 main/templates/main/create_article.html:10
+msgid "Ajouter un article"
+msgstr ""
+
+#: main/templates/main/base.html:26 main/templates/main/chat.html:4
+#: main/templates/main/chat.html:10
+msgid "Chat avec GPT-4"
+msgstr ""
+
+#: main/templates/main/base.html:31
+msgid "Français"
+msgstr ""
+
+#: main/templates/main/base.html:32
+msgid "Anglais"
+msgstr ""
+
+#: main/templates/main/base.html:42
+msgid "Tous les droits sont réservés"
+msgstr ""
+
+#: main/templates/main/chat.html:18
+msgid "Posez votre question"
+msgstr ""
+
+#: main/templates/main/chat.html:24
+msgid "Envoyer"
+msgstr ""
+
+#: main/templates/main/chat.html:30
+msgid "Réponse"
+msgstr ""
+
+#: main/templates/main/chat.html:34
+msgid "Chargement..."
+msgstr ""
+
+#: main/templates/main/create_article.html:4
+msgid "Publier"
+msgstr ""
+
+#: main/templates/main/create_article.html:17
+msgid "Titre"
+msgstr ""
+
+#: main/templates/main/create_article.html:21
+msgid "Contenu"
+msgstr ""
+
+#: main/templates/main/create_article.html:24
+msgid "Ajouter"
+msgstr ""
+
+#: main/templates/main/index.html:8
+msgid "Articles publiés"
+msgstr ""
+
+#: main/templates/main/index.html:13
+msgid "Le"
+msgstr ""
