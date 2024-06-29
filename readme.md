@@ -55,8 +55,16 @@ python manage.py createsuperuser
 ```
 7. Lancez le serveur de développement :
 ```shell
-
+python manage.py runserver
 ```
 Le site devrait maintenant être accessible à http://127.0.0.1:8000.
 
-# Structure du Projet
+# Déploiement
+Ce projet est en production sur Render via: [linguasite](https://linguasite.onrender.com/)
+
+## Vulnérabilités de sécurité
+Si vous découvrez une faille de sécurité, veuillez envoyer un courriel à Valery MAYOU via [mayoujord@gmail.cm](mayoujord@gmail.cm). 
+Toutes les failles de sécurité seront traitées rapidement.
+
+# Contribuer
+Les contributions sont les bienvenues merci.
