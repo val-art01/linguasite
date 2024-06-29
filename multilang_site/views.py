@@ -9,7 +9,7 @@ def set_language(request, language):
     """
     Modifie la langue actuelle de l'application en fonction de la langue spécifiée dans la requête.
 
-    Cette fonction tente de résoudre la vue correspondant à l'URL de la page précédente pour rediriger
+    Cette fonction résoud la vue correspondant à l'URL de la page précédente pour rediriger
     l'utilisateur vers la même page après avoir changé la langue. Si la vue ne peut pas être résolue,
     l'utilisateur est redirigé vers la page d'accueil.
     Args:

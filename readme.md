@@ -5,7 +5,7 @@ Ce projet est un site Django simple et multilingue qui permet aux utilisateurs d
 ## Utilisation
 Création d'un article en tent que user ou admin
 Accédez à la page d'accueil pour voir les articles en ligne.
-Cliquez sur "Ajouter un article".
+Cliquez sur "Ajouter un article" pour ajouter en article en tant que utilisateur ou naviguez vers:[https://linguasite.onrender.com/admin](https://linguasite.onrender.com/admin), conctez vous avec les ID suivant: login<admin>, password<admin>.
 
 ## Utilisation du Chatbot
 Accédez à la page du chatbot.
@@ -57,7 +57,7 @@ python manage.py createsuperuser
 ```shell
 python manage.py runserver
 ```
-Le site devrait maintenant être accessible à http://127.0.0.1:8000.
+Le site devrait maintenant être accessible en local via http://127.0.0.1:8000.
 
 # Déploiement
 Ce projet est en production sur Render via: [linguasite](https://linguasite.onrender.com/)

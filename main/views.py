@@ -39,7 +39,7 @@ def chatbot(request):
     Gère les requêtes de chat pour interagir avec un modèle GPT-4 d'OpenAI.
     Cette fonction traite les requêtes POST contenant une question et envoie cette question à l'API
     OpenAI pour obtenir une réponse. Si la requête est réussie, elle retourne la réponse sous forme
-    de JSON. En cas de surcharge de l'API ou d'autre erreur, elle retourne un message d'erreur approprié.
+    de JSON. En cas de surcharge de l'API ou d'autre erreur, elle retourne un message d'erreur.
     Args:
         request (HttpRequest): L'objet de requête HTTP.
     Returns:
