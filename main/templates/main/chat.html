@@ -10,7 +10,7 @@
          <h1>{% trans "Chat avec GPT-4" %}</h1>
       </div>
       <div class="bg-light shadow-sm mx-auto" style="border-radius: 21px 21px 0 0;">
-        <form onsubmit="submitQuestion(event)">
+        <form method="post" onsubmit="submitQuestion(event)">
           {% csrf_token %}
           <div class="form-row">
             <br>
@@ -57,7 +57,7 @@
       event.preventDefault();
       const question = document.getElementById('question').value;
       document.getElementById('loading').style.display = 'block';
-      document.getElementById('amswer').innerText = '';
+      document.getElementById('answer').innerText = '';
       const response = await fetch('', {
         method:'POST',
         headers: {

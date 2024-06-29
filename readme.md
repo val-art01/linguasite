@@ -26,8 +26,8 @@ Assurez-vous d'avoir installé les éléments suivants sur votre machine :
 
 1. Clonez le dépôt :
 ```sh
-git clone https://github.com/votre-utilisateur/test-technique.git
-cd test-technique
+git https://github.com/val-art01/linguasite.git
+cd linguasite
 ```
 2. Créez un environnement virtuel et activez-le :
 ```sh
@@ -39,7 +39,7 @@ source env/bin/activate  # Sur Windows, utilisez `env\Scripts\activate`
 pip install -r requirements.txt
 ```
 4. Configurez les variables d'environnement:
-Créez un fichier .env à la racine du projet et ajoutez-y votre clé API OpenAI.
+Créez un fichier .env à la racine du projet et ajoutez-y votre clé API OpenAI ainsi que l’URL de la base de données externe de Render si vous en avez une. À défaut de cela, utilisez MySQL comme base de données et configurez le fichier settings.py avec les paramètres de MySQL. Un exemple de configuration se trouve dans le fichier .env.example.
 rassurez vous que votre quota actuel pour l'utilisation de l'API OpenAI n'est pas encore dépassé
 ```sh
     OPENAI_API_KEY=your_openai_api_key
@@ -55,7 +55,7 @@ python manage.py createsuperuser
 ```
 7. Lancez le serveur de développement :
 ```shell
-python manage.py runserver
+
 ```
 Le site devrait maintenant être accessible à http://127.0.0.1:8000.
 
